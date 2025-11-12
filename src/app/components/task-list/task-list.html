@@ -1,0 +1,34 @@
+<div class="page">
+  <h1>Feladatok</h1>
+
+  <div class="controls">
+    @if (user) {
+      <div class="user">Bejelentkezve: {{ user }}</div>
+      <button class="logout" (click)="logout()">Kijelentkezés</button>
+    } @else {
+      <div class="user">Nincs bejelentkezve felhasználó</div>
+      <button class="login" (click)="tologinPage()">Bejelentkezés</button>
+    }
+    <button (click)="onNew()">Új feladat</button>
+  </div>
+
+  @if (tasks.length === 0) {
+    <div class="empty">A lista üres — nem lát egy elemet sem.</div>
+  } @else {
+    <div class="tasks">
+      <h2>Aktív feladatok</h2>
+      @for (t of tasks; track t.id) {
+        @if (!t.done) {
+          <app-task-item [task]="t" (markDone)="markDone($event)"></app-task-item>
+        }
+      }
+
+      <h2>Kész feladatok</h2>
+      @for (t of tasks; track t.id) {
+        @if (t.done) {
+          <app-task-item [task]="t"></app-task-item>
+        }
+      }
+    </div>
+  }
+</div>

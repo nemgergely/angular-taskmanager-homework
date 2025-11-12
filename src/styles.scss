@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #aaaaf8;
+  color: #ffffff;
+}
+
+h1 {
+  background-image: linear-gradient(to right, #5555B2, #aaaaf8);
+  padding: 8px;
+}
+
+button {
+  background-color: #1f1f61;
+  margin: 5px 5px 5px 0px;
+  padding: 8px;
+  border-radius: 5px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+input {
+  margin-bottom: 5px;
+  padding: 8px; 
+  background-color: #5555B2; 
+  font-weight: bold;
+  color: #ffffff;
+}

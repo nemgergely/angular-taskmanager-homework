@@ -1,0 +1,17 @@
+<div class="page" [class.done]="task.done">
+  <div class="content">
+    <h3>{{ task.title }}</h3>
+    @if (task.author) {
+      <p class="author">Felhasználó: {{ task.author }}</p>
+    }
+    <p class="desc">Leírás: {{ task.description }}</p>
+  </div>
+
+  <div class="actions">
+    @if (!task.done) {
+      <button (click)="onMarkDone()">Kész</button>
+    } @else {
+      <span class="done-label">Kipipálva!</span>
+    }
+  </div>
+</div>

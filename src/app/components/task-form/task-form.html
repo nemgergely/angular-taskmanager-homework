@@ -1,0 +1,11 @@
+<div class="page">
+  <h1>Új feladat</h1>
+    <input type="text" [(ngModel)]="title" name="title" placeholder="Név" required />
+    <br/>
+
+    <input type="text" [(ngModel)]="description" placeholder="Leírás" name="description" />
+    <br/>
+
+    <button (click)="save()">Mentés</button>
+    <button (click)="cancel()">Mégse</button>
+</div>

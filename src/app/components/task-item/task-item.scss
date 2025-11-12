@@ -1,0 +1,24 @@
+.page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid rgb(172, 47, 207);
+  border-radius: 8px;
+  margin-bottom: 8px;
+
+  .content {
+    flex: 1;
+  }
+
+  .actions {
+    margin-left: 12px;
+  }
+
+  h3 {
+    margin-top: 0px;
+    padding: 5px;
+    background-image: linear-gradient(to right, #8989da, #aaaaf8);
+    border-radius: 8px;
+  }
+}
