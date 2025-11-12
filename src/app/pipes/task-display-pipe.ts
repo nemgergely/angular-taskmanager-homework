@@ -6,8 +6,8 @@ import { Task } from '../models/task.model';
 )
 export class TaskDisplayPipe implements PipeTransform {
   transform(task: Task): string {
-    const author = task.author ? ' — ${task.author}' : '';
-    const status = task.done ? ' (Kész)' : '';
-    return task.title + author + '\n' + task.description + status;
+    const author = task.author ?  ' - ' + task.author : '';
+    const status = task.done ? '(Kész)' : '';
+    return task.title + author + ' ' + status;
   }
 }

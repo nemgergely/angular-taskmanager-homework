@@ -1,9 +1,6 @@
-<div class="page" [class.done]="task.done">
+<div class="page">
   <div class="content">
-    <h3>{{ task.title }}</h3>
-    @if (task.author) {
-      <p class="author">Felhasználó: {{ task.author }}</p>
-    }
+    <h3>{{ task | taskDisplay }}</h3>
     <p class="desc">Leírás: {{ task.description }}</p>
   </div>
 
